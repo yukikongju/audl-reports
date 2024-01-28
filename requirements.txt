@@ -1,0 +1,6 @@
+audl==0.0.13
+pandas
+numpy
+matplotlib
+seaborn
+supabase
