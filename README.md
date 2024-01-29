@@ -8,7 +8,7 @@ Generating reports for AUDL
     * `tufte` Databases
     * [planetscale](https://planetscale.com/docs/onboarding/create-an-account)
     * [supabase](https://supabase.com/dashboard/projects)
-    * `railway`
+    * [railway](https://docs.railway.app/)
 
 M1:
 1. Computing in R with reticulate

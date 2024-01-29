@@ -1,12 +1,13 @@
 import os 
 import warnings
 import logging
+import dotenv
 
-from dotenv import load_dotenv
-from supabase import create_client
+from supabase import create_client, Client
 
-def load_supabase_client():
-    load_dotenv()
+
+def load_supabase_client() -> Client:
+    dotenv.load_dotenv()
     url = os.environ.get("SUPABASE_URL")
     key = os.environ.get("SUPABASE_KEY")
     try: 
