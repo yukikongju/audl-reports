@@ -27,7 +27,7 @@ class GameStatsExtractor(object):
         - player_game_stats
         - team_game_stats
         """
-        #  self._update_throws_distribution_table()
+        self._update_throws_distribution_table()
         self._update_player_game_stats_table()
         self._update_team_game_stats_table()
 
@@ -65,14 +65,48 @@ class GameStatsExtractor(object):
         dct = df_throws.to_dict(orient='records')
         return dct
         
-    def _update_player_game_stats_table(self): # TODO
+    def _update_player_game_stats_table(self): 
         # --- fetch from audl api
-        #  df = self.game.get_roster_stats()
+        df = self.game.get_roster_stats()
 
         # --- format dataframe
+        cols_dict = {
+                'gameID': 'game_id',
+                'player_ext_id': 'player_ext_id',
+                'team_ext_id': 'team_ext_id',
+                'assists': 'assists',
+                'goals': 'goals',
+                'hockeyAssists': 'hockey_assists',
+                'completions': 'completions',
+                'throwaways': 'throwaways',
+                'stalls': 'stalls',
+                'throwsAttempted': 'throws_attempted',
+                'catches': 'catches',
+                'drops': 'drops',
+                'blocks': 'blocks',
+                'callahans': 'callahans',
+                'pulls': 'pulls',
+                'obPulls': 'ob_pulls',
+                'recordedPulls': 'recorded_pulls',
+                'recordedPullsHangtime': 'recorded_pulls_hangtime',
+                'oPointsPlayed': 'offensive_points_played',
+                'oPointsScored': 'offensive_points_scored',
+                'dPointsPlayed': 'defensive_points_played',
+                'dPointsScored': 'defensive_points_scored',
+                'secondsPlayed': 'seconds_played',
+                'yardsReceived': 'yards_received',
+                'yardsThrown': 'yards_thrown',
+                'hucksAttempted': 'hucks_attempted',
+                'hucksCompleted': 'hucks_completed',
+                }
+        df = df.rename(columns=cols_dict)
+        df = df[cols_dict.values()]
 
         # --- convert to dictionary
-        pass
+        dct = df.to_dict(orient='records')
+
+        # --- upsert to database
+        data = self.client.table('player_game_stats').upsert(dct).execute()
 
 
     def _update_team_game_stats_table(self): 
