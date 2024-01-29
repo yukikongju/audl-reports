@@ -3,6 +3,7 @@ import numpy as np
 
 from audl.stats.endpoints.gamestats import GameStats
 from utils import load_supabase_client
+from tables.constants import PLAYER_GAME_STATS_TABLE_NAME, TEAM_GAME_STATS_TABLE_NAME, THROWS_DISTRIBUTION_TABLE_NAME
 
 
 class GameStatsExtractor(object):
@@ -36,7 +37,7 @@ class GameStatsExtractor(object):
         data_dct = self.__get_formated_throws_distribution_dict()
         
         # --- upsert in table
-        data = self.client.table('throws_distribution').upsert(data_dct).execute()
+        data = self.client.table(THROWS_DISTRIBUTION_TABLE_NAME).upsert(data_dct).execute()
 
     def __get_formated_throws_distribution_dict(self):
         # --- fetch from audl api
@@ -106,7 +107,7 @@ class GameStatsExtractor(object):
         dct = df.to_dict(orient='records')
 
         # --- upsert to database
-        data = self.client.table('player_game_stats').upsert(dct).execute()
+        data = self.client.table(PLAYER_GAME_STATS_TABLE_NAME).upsert(dct).execute()
 
 
     def _update_team_game_stats_table(self): 
@@ -149,5 +150,5 @@ class GameStatsExtractor(object):
         dct = df.to_dict(orient='records')
 
         # --- upsert into dataframe
-        data = self.client.table('team_game_stats').upsert(dct).execute()
+        data = self.client.table(TEAM_GAME_STATS_TABLE_NAME).upsert(dct).execute()
         
