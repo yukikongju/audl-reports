@@ -1,4 +1,4 @@
-audl==0.0.13
+audl==0.0.15
 pandas
 numpy
 matplotlib
