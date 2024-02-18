@@ -5,3 +5,10 @@ update_database:
 
 # generate_team_report:
 
+
+update_airflow:
+	python3 ~/airflow/dags/audl_reports_pipeline.py
+	# python3 pipeline.py
+	airflow db migrate
+	airflow scheduler
+

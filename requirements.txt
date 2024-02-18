@@ -5,3 +5,4 @@ matplotlib
 seaborn
 supabase
 apache-airflow==2.8.1
+jedi-language-server

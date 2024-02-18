@@ -2,7 +2,7 @@
 [link to pipeline](https://docs.google.com/drawings/d/1IdWRcp2mRWDZX7EwqnIUUZ3jFeHZ4ynZm599IL8uahc/edit)
 
 Todos:
-- [O] ETL
+- [O] ETL Pipeline
     - [O] Define Tables schema in mysql:
 	- [X] `player_throws` table
 	- [X] `player_game_stats` table: individual statistic for each game
@@ -10,6 +10,11 @@ Todos:
     - [X] define row level security in supabase
     - [X] rpc for distinct game_ids
     - [ ] later: create read tables policy for authenticated users
+- [.] Setup data orchestration: Airflow
+    - [X] write airflow
+    - [ ] activate dag in 'list'
+    - [ ] Docker file
+- [ ] setup data validation: the great expectaction
 - [ ] Player Profile Report
     - [ ] Makefile to generate profile report from terminal
 - [ ] Team Profile Report
