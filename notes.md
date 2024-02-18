@@ -72,3 +72,15 @@ LANGUAGE plpgsql;
 
 -- select * from get_distinct_keys('team_game_stats', 'game_id');
 ```
+
+
+**Airflow Setup**
+
+```
+airflow db init
+airflow config
+airflow webserver
+airflow scheduler
+```
+
+

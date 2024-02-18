@@ -31,6 +31,7 @@ M2: [ THIS ]
 **Requirements**
 
 - railway: nodejs, npm
+- astro
 
 ## Bundles
 
@@ -79,10 +80,20 @@ M2: [ THIS ]
 Create `.env` file with `SUPABASE_URL` and `SUPABASE_KEY`
 
 
+```
+# astro installation
+curl -sSL install.astronomer.io | sudo bash -s
+```
+
+
 ## Ressources
 
 - [Tufte - RMarkdown](https://bookdown.org/yihui/rmarkdown/tufte-handouts.html)
 - [Supabase crashcourse for python dev](https://www.youtube.com/watch?v=M6cfT2pqpSc)
 - [build an AI app with fastAPI and Docker](https://www.youtube.com/watch?v=iqrS7Q174Ac)
 - [Supabase Functions](https://www.youtube.com/watch?v=MJZCCpCYEqk&t=122s)
+- [A complete Apache Airflow tutorial](https://theaisummer.com/apache-airflow-tutorial/)
+- [Airflow Setup with Docker](https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html)
+- [Data with Marc - Getting Started with Airflow for Beginners](https://www.youtube.com/watch?v=xUKIL7zsjos)
+- [Astro Installation]()
 

@@ -4,4 +4,4 @@ numpy
 matplotlib
 seaborn
 supabase
-apache-airflow
+apache-airflow==2.8.1
