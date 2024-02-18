@@ -14,7 +14,8 @@ Todos:
     - [X] write airflow
     - [ ] activate dag in 'list'
     - [ ] Docker file
-- [ ] setup data validation: the great expectaction
+	- [ ] docker composer
+- [ ] setup data validation: the great expectation
 - [ ] Player Profile Report
     - [ ] Makefile to generate profile report from terminal
 - [ ] Team Profile Report
