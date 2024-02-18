@@ -6,9 +6,19 @@ Generating reports for AUDL
 
 - Markdown
     * `tufte` Databases
+- Database
     * [planetscale](https://planetscale.com/docs/onboarding/create-an-account)
     * [supabase](https://supabase.com/dashboard/projects)
+- Hosts
     * [railway](https://docs.railway.app/)
+    * [vercel]
+- Data Orchestration
+    * [airflow]
+    * [dagster]
+- Data Observability
+    * [the great expectation]
+
+
 
 M1:
 1. Computing in R with reticulate
@@ -74,4 +84,5 @@ Create `.env` file with `SUPABASE_URL` and `SUPABASE_KEY`
 - [Tufte - RMarkdown](https://bookdown.org/yihui/rmarkdown/tufte-handouts.html)
 - [Supabase crashcourse for python dev](https://www.youtube.com/watch?v=M6cfT2pqpSc)
 - [build an AI app with fastAPI and Docker](https://www.youtube.com/watch?v=iqrS7Q174Ac)
+- [Supabase Functions](https://www.youtube.com/watch?v=MJZCCpCYEqk&t=122s)
 

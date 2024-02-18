@@ -4,3 +4,4 @@ numpy
 matplotlib
 seaborn
 supabase
+apache-airflow
