@@ -1,0 +1,15 @@
+version: '3'
+services:
+  airflow:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: your-airflow-image:latest
+    ports:
+      - "8080:8080"
+    environment:
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=sqlite:////tmp/airflow.db
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+    volumes:
+      - /path/to/your/local/dags:/opt/airflow/dags
+
